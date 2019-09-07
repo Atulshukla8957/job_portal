@@ -29,6 +29,7 @@ gem 'puma', '~> 3.11'
 gem 'active_admin_import', github: 'activeadmin-plugins/active_admin_import'
 gem 'activeadmin', '>= 1.4.3'
 gem 'activeadmin-searchable_select'
+gem 'active_admin_datetimepicker'
 gem 'cancan'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
