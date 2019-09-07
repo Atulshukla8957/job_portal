@@ -5,8 +5,11 @@ ruby '2.6.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
+gem 'bcrypt', '~> 3.1.7'
+gem 'jwt'
+
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -22,6 +25,18 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+gem 'active_admin_import', github: 'activeadmin-plugins/active_admin_import'
+gem 'activeadmin', '>= 1.4.3'
+gem 'activeadmin-searchable_select'
+gem 'cancan'
+gem 'bootsnap', '>= 1.1.0', require: false
+gem 'devise'
+
+gem 'active_model_serializers'
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws'
+gem 'mini_magick'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
