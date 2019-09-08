@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  degree_name: MyString
+  stream: MyString
+  institute_name: MyString
+  start_date: 2019-09-08 13:53:46
+  end_date: 
+  percentage: 1.5
+  cgpa: 1.5
+
+two:
+  degree_name: MyString
+  stream: MyString
+  institute_name: MyString
+  start_date: 2019-09-08 13:53:46
+  end_date: 
+  percentage: 1.5
+  cgpa: 1.5
