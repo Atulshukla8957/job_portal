@@ -30,20 +30,6 @@ module Api
           render_unprocessable_entity(error: 'Auth token is not valid')
         end
       end
-
-      def verify_otp
-        if @user
-          response = @user.valid_confirmation_code?(params[:user][:code])
-          if response.success?
-            @user.update(verify_at: Time.now, sign_in_count: @user.update_sign_in_count, account_status: true)
-            render_success_response(user: single_serializer.new(@user, serializer: set_serializer(@user)), token: JsonWebToken.encode(user_id: @user.id, exp: @user.timeout_in, serializer: set_serializer(@user)))
-          else
-            render_unprocessable_entity(response.message)
-          end
-        else
-          render_unprocessable_entity(I18n.t('errors.accout_deactivated', resource: 'user'))
-        end
-      end
         
         private
 

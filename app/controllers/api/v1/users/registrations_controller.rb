@@ -29,10 +29,9 @@ module Api
             @user = User.find_by(email: user_params[:email])
             if @user.present?
               @user.set_reset_password_token
-              render json: {user: @user }, methods: :auth_token, status: :created
-              # render_success_response({
-              #                         user: single_serializer.new(@user, serializer: RegistrationSerializer)
-              #                       }, "Password reset link sent successfully")
+              render_success_response({
+                                      user: single_serializer.new(@user, serializer: RegistrationSerializer)
+                                    }, "Password reset link sent successfully")
             end
           rescue => e
             render_unprocessable_entity(error: e.message)
