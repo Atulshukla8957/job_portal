@@ -5,6 +5,9 @@ class User < ApplicationRecord
 
 	mount_uploader :profile_pic, ProfilePicUploader
   mount_uploader :page_cover, PageCoverUploader
+    
+  enum job_type: { full_time: 0, contract: 1, part_time: 2, freelance: 4 }   
+
   has_many :auth_tokens, dependent: :destroy
   has_and_belongs_to_many :education_details 
 	has_and_belongs_to_many :experience_details
